@@ -1,0 +1,48 @@
+{
+  "name": "cli-boilerplate-node",
+  "version": "0.0.1",
+  "description": "Boilerplate to create node node command line interface (CLI) application using ES2017",
+  "main": "./dist/bin/cli.js",
+  "scripts": {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "lint": "eslint bin && eslint lib",
+    "build": "rimraf dist && babel lib --out-dir dist/lib && babel bin --out-dir dist/bin && node dist/bin/index.js",
+    "preversion": "npm run lint",
+    "prepublish": "npm run lint && npm run build && npm run changelog"
+  },
+  "bin": {
+    "cli-boilerplate-node": "./dist/bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sun1l/cli-boilerplate-node.git"
+  },
+  "keywords": [
+    "cli",
+    "boilerplate",
+    "cli boilerplate",
+    "node cli boilerplate"
+  ],
+  "author": {
+    "name": "Sunil Kumar",
+    "url": "https://twitter.com/sun1lkumar"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sun1l/cli-boilerplate-node/issues"
+  },
+  "homepage": "https://github.com/sun1l/cli-boilerplate-node#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "inquirer": "^3.0.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-eslint": "^7.2.1",
+    "babel-preset-latest": "^6.24.0",
+    "conventional-changelog-cli": "^1.3.1",
+    "eslint": "^3.18.0",
+    "rimraf": "^2.6.1"
+  }
+}
