@@ -1,18 +1,29 @@
 #!/usr/bin/env node
 
+/**
+ * This is CLI entry point, it validates the node version againts the confg file and
+ * load 'cli.js', which will load dependencies for commands and prompts
+ *
+ * Note: DO NOT remove the shebang i.e. '#!/usr/bin/env node' on top of this file.
+ * It is required to make this an executable.
+ * To know more, read https://en.wikipedia.org/wiki/Shebang_(Unix)
+ */
+
 'use strict';
 
 const CONFIG = require('../lib/config');
-const chalk = require('chalk');
 
-var currentNodeVersion = process.versions.node;
-if (currentNodeVersion.split('.')[0] < CONFIG.mimNodeVersion) {
+let nodeVersion = process.versions.node;
+
+if (nodeVersion.split('.')[0] < CONFIG.mimNodeVersion) {
+
   console.error(
-    chalk.red(
-      `You are running Node ${currentNodeVersion}\n` +
-       `This CLI requires Node ${CONFIG.mimNodeVersion} or higher.`
+    require('chalk').red(
+      `You are running Node v${nodeVersion}\n` +
+       `${require('../../package.json').name} requires Node v${CONFIG.mimNodeVersion} or higher.`
     )
   );
+
   process.exit(1);
 }
 
