@@ -1,11 +1,10 @@
 #!/usr/bin/env node
 
 /**
- * This is CLI entry point, it validates the node version againts the confg file and
- * load 'cli.js', which will load dependencies for commands and prompts
+ * This is the entry point for CLI, it validates the node version againts the confg file and
+ * load 'cli.js', which will load commands and prompts for user input
  *
  * Note: DO NOT remove the shebang i.e. '#!/usr/bin/env node' on top of this file.
- * It is required to make this an executable.
  * To know more, read https://en.wikipedia.org/wiki/Shebang_(Unix)
  */
 
