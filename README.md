@@ -1,4 +1,4 @@
-# CLI Boilerplate for node
+# Boilerplate for node CLI
 `cli-boilerplate-node` is boilerplate to create node node command line interface (CLI) applications using Commander, Chalk, Inquirer and ES2015/17.
 
 [![GitHub issues](https://img.shields.io/github/issues/sun1l/cli-boilerplate-node.svg)](https://github.com/sun1l/cli-boilerplate-node/issues)
