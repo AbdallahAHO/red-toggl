@@ -44,9 +44,11 @@ module.exports = function(yargs) {
       'the default command',
       ()=>{},
       (argv) => {
+
+        if(argv._.length > 0)
         console.log(
           chalk.red(
-            `Unknown Command!}\n` +
+            `Unknown Command: ${JSON.stringify(argv._)}}\n` +
             `Specify --help for available options`
           )
         )
