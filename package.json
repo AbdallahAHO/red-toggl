@@ -1,6 +1,6 @@
 {
-  "name": "cli-boilerplate-node",
-  "description": "Boilerplate to create node node command line interface (CLI) application using ES2017",
+  "name": "red-toggl",
+  "description": "Node.js CLI Application to synchronize Toggl time entries with Redmine.",
   "version": "0.0.1",
   "scripts": {
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
@@ -12,27 +12,27 @@
   },
   "main": "./dist/bin/index.js",
   "bin": {
-    "cli-boilerplate-node": "./dist/bin/index.js"
+    "red-toggl": "./dist/bin/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sun1l/cli-boilerplate-node.git"
+    "url": "git+https://github.com/AbdallahAHO/red-toggl.git"
   },
   "keywords": [
+    "remdine",
+    "toggl",
     "cli",
-    "boilerplate",
-    "cli boilerplate",
-    "node cli boilerplate"
+    "node.js"
   ],
   "author": {
-    "name": "Sunil Kumar",
-    "url": "https://twitter.com/sun1lkumar"
+    "name": "Abdallah Hassan",
+    "url": "https://twitter.com/AbdallahAHO"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sun1l/cli-boilerplate-node/issues"
+    "url": "https://github.com/AbdallahAHO/red-toggl/issues"
   },
-  "homepage": "https://github.com/sun1l/cli-boilerplate-node#readme",
+  "homepage": "https://github.com/AbdallahAHO/red-toggl",
   "dependencies": {
     "chalk": "^1.1.3",
     "inquirer": "^3.0.6",
